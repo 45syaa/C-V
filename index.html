@@ -35,10 +35,17 @@
 
         h2 {
             margin: 20px 0 10px;
+            cursor: pointer; /* إضافة تأثير المؤشر */
+            color: #007BFF; /* لون أزرار القسم */
         }
 
-        p {
-            margin-top: 10px;
+        .content {
+            display: none; /* إخفاء المحتوى بشكل افتراضي */
+            text-align: left;
+            width: 80%; /* عرض القسم */
+            max-width: 600px; /* الحد الأقصى للعرض */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .icons {
@@ -64,22 +71,13 @@
             margin-bottom: 20px; /* مسافة تحت الصورة */
             object-fit: cover; /* الحفاظ على تناسق الصورة */
         }
-
-        .section {
-            margin: 20px 0;
-            text-align: left;
-            width: 80%; /* عرض القسم */
-            max-width: 600px; /* الحد الأقصى للعرض */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin: 0;
-            padding-left: 20px;
-        }
     </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </head>
 <body>
     <div>
@@ -97,41 +95,51 @@
         </div>
 
         <div class="section">
-            <h2>التعليم</h2>
-            <ul>
-                <li>[اسم الشهادة] - [اسم الجامعة] - [سنة التخرج]</li>
-            </ul>
+            <h2 onclick="toggleContent('educationContent')">التعليم</h2>
+            <div id="educationContent" class="content">
+                <ul>
+                    <li>[اسم الشهادة] - [اسم الجامعة] - [سنة التخرج]</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
-            <h2>الخبرة العملية</h2>
-            <ul>
-                <li>[اسم الوظيفة] - [اسم الشركة] - [من سنة] إلى [إلى سنة]</li>
-                <li>[وصف موجز عن المهام والإنجازات]</li>
-            </ul>
+            <h2 onclick="toggleContent('experienceContent')">الخبرة العملية</h2>
+            <div id="experienceContent" class="content">
+                <ul>
+                    <li>[اسم الوظيفة] - [اسم الشركة] - [من سنة] إلى [إلى سنة]</li>
+                    <li>[وصف موجز عن المهام والإنجازات]</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
-            <h2>المهارات</h2>
-            <ul>
-                <li>مهارة 1</li>
-                <li>مهارة 2</li>
-                <li>مهارة 3</li>
-            </ul>
+            <h2 onclick="toggleContent('skillsContent')">المهارات</h2>
+            <div id="skillsContent" class="content">
+                <ul>
+                    <li>مهارة 1</li>
+                    <li>مهارة 2</li>
+                    <li>مهارة 3</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
-            <h2>الدورات والشهادات</h2>
-            <ul>
-                <li>[اسم الدورة/الشهادة] - [الجهة المصدرة] - [سنة الحصول عليها]</li>
-            </ul>
+            <h2 onclick="toggleContent('certificatesContent')">الدورات والشهادات</h2>
+            <div id="certificatesContent" class="content">
+                <ul>
+                    <li>[اسم الدورة/الشهادة] - [الجهة المصدرة] - [سنة الحصول عليها]</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
-            <h2>المشاريع</h2>
-            <ul>
-                <li>[اسم المشروع] - [وصف مختصر عن المشروع]</li>
-            </ul>
+            <h2 onclick="toggleContent('projectsContent')">المشاريع</h2>
+            <div id="projectsContent" class="content">
+                <ul>
+                    <li>[اسم المشروع] - [وصف مختصر عن المشروع]</li>
+                </ul>
+            </div>
         </div>
 
         <p>هذه صفحة بسيطة باستخدام GitHub Pages.</p>
