@@ -15,11 +15,12 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 20px;
         }
 
         @keyframes gradient {
@@ -30,6 +31,10 @@
 
         h1 {
             margin: 0;
+        }
+
+        h2 {
+            margin: 20px 0 10px;
         }
 
         p {
@@ -59,29 +64,79 @@
             margin-bottom: 20px; /* مسافة تحت الصورة */
             object-fit: cover; /* الحفاظ على تناسق الصورة */
         }
+
+        .section {
+            margin: 20px 0;
+            text-align: left;
+            width: 80%; /* عرض القسم */
+            max-width: 600px; /* الحد الأقصى للعرض */
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
     <div>
         <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورتي" class="profile-pic">
         <h1>مرحبًا بك في صفحتي الشخصية!</h1>
+        
+        <div class="summary">
+            <h2>ملخص مهني</h2>
+            <p>
+                محترف في الأنظمة الأمنية يتمتع بخبرة تتجاوز 7 سنوات في تطوير وتنفيذ حلول الأمان 
+                المتكاملة. يتمتع بمهارات قوية في تحليل المخاطر، وإدارة الأمن السيبراني، وتقييم 
+                الأنظمة، مما يسهم في حماية البيانات والموارد. يسعى للانضمام إلى فريق ديناميكي 
+                في [اسم الشركة] للاستفادة من خبرتي لتحقيق أهداف الأمان وتحسين الكفاءة.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>التعليم</h2>
+            <p>[اسم الشهادة] - [اسم الجامعة] - [سنة التخرج]</p>
+        </div>
+
+        <div class="section">
+            <h2>الخبرة العملية</h2>
+            <p>[اسم الوظيفة] - [اسم الشركة] - [من سنة] إلى [إلى سنة]</p>
+            <p>[وصف موجز عن المهام والإنجازات]</p>
+        </div>
+
+        <div class="section">
+            <h2>المهارات</h2>
+            <p>1. مهارة 1</p>
+            <p>2. مهارة 2</p>
+            <p>3. مهارة 3</p>
+        </div>
+
+        <div class="section">
+            <h2>الدورات والشهادات</h2>
+            <p>[اسم الدورة/الشهادة] - [الجهة المصدرة] - [سنة الحصول عليها]</p>
+        </div>
+
+        <div class="section">
+            <h2>المشاريع</h2>
+            <p>[اسم المشروع] - [وصف مختصر عن المشروع]</p>
+        </div>
+
         <p>هذه صفحة بسيطة باستخدام GitHub Pages.</p>
     </div>
     
-   <div class="icons">
-    <a href="https://wa.me/201122822813" target="_blank" aria-label="WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
-    </a>
-    <a href="https://t.me/div_muhamed" target="_blank" aria-label="Telegram">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" class="icon">
-    </a>
-    <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" aria-label="Gmail">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="icon">
-    </a>
-    <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icon">
-    </a>
-    <a href="https://www.facebook.com/mhamed45sya" target="_blank" aria-label="Facebook">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
-    </a>
-</div>
+    <div class="icons">
+        <a href="https://wa.me/201122822813" target="_blank" aria-label="WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
+        </a>
+        <a href="https://t.me/div_muhamed" target="_blank" aria-label="Telegram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" class="icon">
+        </a>
+        <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" aria-label="Gmail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="icon">
+        </a>
+        <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icon">
+        </a>
+        <a href="https://www.facebook.com/mhamed45sya" target="_blank" aria-label="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
+        </a>
+    </div>
+</body>
+</html>
