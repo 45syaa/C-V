@@ -7,7 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+            background: linear-gradient(270deg, #ffccbc, #ffab91, #cfd8dc, #90aacb);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             color: #333;
             text-align: center;
             margin: 0;
@@ -15,18 +17,28 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between; /* توزيع المساحة بين العناصر */
             align-items: center;
         }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         h1 {
             margin: 0;
         }
+
         p {
             margin-top: 10px;
         }
+
         .icons {
-            margin-top: 20px;
+            margin-bottom: 20px; /* مسافة أسفل الأيقونات */
         }
+
         .icon {
             width: 40px; /* حجم الأيقونة */
             margin: 0 10px; /* مسافة بين الأيقونات */
@@ -34,14 +46,21 @@
     </style>
 </head>
 <body>
-    <h1>مرحبًا بك في صفحتي الشخصية!</h1>
-    <p>هذه صفحة بسيطة باستخدام GitHub Pages.</p>
+    <div>
+        <h1>مرحبًا بك في صفحتي الشخصية!</h1>
+        <p>هذه صفحة بسيطة باستخدام GitHub Pages.</p>
+    </div>
     
     <div class="icons">
-        <a href="https://wa.me/=201122822813" target="_blank">
+        <a href="https://wa.me/رقم_الهاتف" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
         </a>
-        <!-- يمكنك إضافة أيقونات أخرى بنفس الطريقة -->
+        <a href="https://t.me/username" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Telegram_logo.svg" alt="Telegram" class="icon">
+        </a>
+        <a href="mailto:example@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Email_icon.svg" alt="Gmail" class="icon">
+        </a>
     </div>
 </body>
 </html>
