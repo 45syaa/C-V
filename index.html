@@ -40,8 +40,8 @@
             border-radius: 15px; 
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s, transform 0.2s;
-            margin: 15px 10px; 
-            width: 30%; 
+            margin: 15px 0; 
+            width: 80%; 
             font-size: 40px;
             font-family: 'Inconsolata', monospace; 
             text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
@@ -55,6 +55,7 @@
             margin-top: 20px;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* تكييف الأيقونات إذا كانت الشاشة صغيرة */
         }
         .icon {
             width: 40px; 
@@ -113,7 +114,7 @@
         <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورة شخصية" class="profile-pic">
         
         <div id="englishContent" class="content">
-            <h2>Professional CV</h2>
+            <h2>Welcome to My Profile</h2>
             <button class="button" onclick="toggleContent('summaryEng')">
                 <i class="fas fa-info-circle"></i> Professional Summary
             </button>
@@ -170,7 +171,7 @@
                 </ul>
             </div>
 
-            <button class="button" onclick="goBackToLanguageSelection()">رجوع</button>
+            <button class="button" onclick="goBackToLanguageSelection()">Back</button>
         </div>
 
         <div id="arabicContent" class="content">
