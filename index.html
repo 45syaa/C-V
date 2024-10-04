@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Page</title>
+    <title>صفحة السيرة الذاتية</title>
     <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,9 +15,9 @@
             margin: 0;
             padding: 20px;
             text-align: center;
-            background-image: url('https://raw.githubusercontent.com/45syaa/C-V/refs/heads/main/img_2_1694251231566.jpg'); /* ضع رابط الصورة المستطيلة هنا */
-            background-size: cover; /* تغطية كامل الشاشة */
-            background-position: center; /* محاذاة الصورة إلى المركز */
+            background-image: url('https://raw.githubusercontent.com/45syaa/C-V/refs/heads/main/img_2_1694251231566.jpg');
+            background-size: cover;
+            background-position: center;
         }
         h1 {
             margin: 10px 0;
@@ -26,7 +26,7 @@
         .container {
             max-width: 800px;
             margin: auto;
-            background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء مع شفافية */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -39,9 +39,9 @@
             border-radius: 15px; 
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s, transform 0.2s;
-            margin: 15px 30%;
-            width: 40%;
-            font-size: 32px; 
+            margin: 15px 10px; /* تعديل الهوامش ليتناسب مع الأزرار */
+            width: 30%; /* تعديل العرض للأزرار */
+            font-size: 40px;
             font-family: 'Inconsolata', monospace; 
             text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
         }
@@ -69,92 +69,67 @@
             height: 150px;
             object-fit: cover;
         }
+        .content {
+            display: none; /* إخفاء المحتوى في البداية */
+        }
     </style>
     <script>
-        function toggleContent(id) {
-            const content = document.getElementById(id);
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        function toggleLanguage(language) {
+            const englishContent = document.getElementById('englishContent');
+            const arabicContent = document.getElementById('arabicContent');
+            if (language === 'english') {
+                englishContent.style.display = 'block';
+                arabicContent.style.display = 'none';
+            } else {
+                arabicContent.style.display = 'block';
+                englishContent.style.display = 'none';
+            }
         }
     </script>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Personal Page!</h1>
-        <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>مرحبًا بكم في صفحتي الشخصية!</h1>
+        <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورة شخصية" class="profile-pic">
         
-        <button class="button" onclick="toggleContent('summary')">
-            <i class="fas fa-info-circle"></i> Professional Summary
-        </button>
-        <div id="summary" class="content" style="display: none;">
-            <p>A security systems professional with over 7 years of experience in developing and implementing integrated security solutions. Seeking to join a dynamic team to achieve security goals and enhance efficiency.</p>
+        <div>
+            <button class="button" onclick="toggleLanguage('english')">English</button>
+            <button class="button" onclick="toggleLanguage('arabic')">العربية</button>
         </div>
 
-        <button class="button" onclick="toggleContent('education')">
-            <i class="fas fa-graduation-cap"></i> Education
-        </button>
-        <div id="education" class="content" style="display: none;">
-            <ul>
-                <li>Systems and Information - Pharaohs Institute - Graduated 2021</li>
-            </ul>
-        </div>
+        <div id="englishContent" class="content">
+            <button class="button" onclick="toggleContent('summaryEng')">
+                <i class="fas fa-info-circle"></i> Professional Summary
+            </button>
+            <div id="summaryEng" class="content" style="display: none;">
+                <p>A security systems professional with over 7 years of experience in developing and implementing integrated security solutions. Seeking to join a dynamic team to achieve security goals and enhance efficiency.</p>
+            </div>
 
-        <button class="button" onclick="toggleContent('experience')">
-            <i class="fas fa-briefcase"></i> Work Experience
-        </button>
-        <div id="experience" class="content" style="display: none;">
-            <ul>
-                <li>Security Systems Developer - Smart Systems Egypt - 2017 to Present</li>
-                <li>Responsible for developing and implementing security solutions and managing security protocols.</li>
-            </ul>
-        </div>
+            <button class="button" onclick="toggleContent('educationEng')">
+                <i class="fas fa-graduation-cap"></i> Education
+            </button>
+            <div id="educationEng" class="content" style="display: none;">
+                <ul>
+                    <li>Systems and Information - Pharaohs Institute - Graduated 2021</li>
+                </ul>
+            </div>
 
-        <button class="button" onclick="toggleContent('skills')">
-            <i class="fas fa-tools"></i> Skills
-        </button>
-        <div id="skills" class="content" style="display: none;">
-            <ul>
-                <li>Quick Learner</li>
-                <li>Work Development</li>
-                <li>Achievement Orientation</li>
-                <li>Ability to Endure Difficult Work Conditions</li>
-            </ul>
-        </div>
+            <button class="button" onclick="toggleContent('experienceEng')">
+                <i class="fas fa-briefcase"></i> Work Experience
+            </button>
+            <div id="experienceEng" class="content" style="display: none;">
+                <ul>
+                    <li>Security Systems Developer - Smart Systems Egypt - 2017 to Present</li>
+                    <li>Responsible for developing and implementing security solutions and managing security protocols.</li>
+                </ul>
+            </div>
 
-        <button class="button" onclick="toggleContent('certificates')">
-            <i class="fas fa-certificate"></i> Courses and Certifications
-        </button>
-        <div id="certificates" class="content" style="display: none;">
-            <ul>
-                <li>[Course/Certificate Name] - [Issuing Organization] - [Year]</li>
-            </ul>
-        </div>
-
-        <button class="button" onclick="toggleContent('projects')">
-            <i class="fas fa-project-diagram"></i> Projects
-        </button>
-        <div id="projects" class="content" style="display: none;">
-            <ul>
-                <li>Early Visual Alarm Project - This project is affiliated with the Ministry of Interior and the Central Bank. It involves installing 2 cameras outside banks. In case of any disturbance or danger, pressing a button sends a live image to the Ministry of Interior and the relevant directorate. The project has been completed in Cairo, Giza, and Alexandria.</li>
-            </ul>
-        </div>
-
-        <div class="icons">
-            <a href="https://wa.me/201122822813" target="_blank" aria-label="WhatsApp">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
-            </a>
-            <a href="https://t.me/div_muhamed" target="_blank" aria-label="Telegram">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" class="icon">
-            </a>
-            <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" aria-label="Gmail">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="icon">
-            </a>
-            <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icon">
-            </a>
-            <a href="https://www.facebook.com/mhamed45sya" target="_blank" aria-label="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
-            </a>
-        </div>
-    </div>
-</body>
-</html>
+            <button class="button" onclick="toggleContent('skillsEng')">
+                <i class="fas fa-tools"></i> Skills
+            </button>
+            <div id="skillsEng" class="content" style="display: none;">
+                <ul>
+                    <li>Quick Learner</li>
+                    <li>Work Development</li>
+                    <li>Achievement Orientation</li>
+ 
