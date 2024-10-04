@@ -33,6 +33,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-top: 20px;
         }
         .button:hover {
             background-color: #0056b3;
@@ -40,6 +41,12 @@
         .content {
             display: none;
             margin-top: 10px;
+        }
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
     </style>
     <script>
@@ -52,11 +59,11 @@
 <body>
     <div class="container">
         <h1>مرحبًا بك في صفحتي الشخصية!</h1>
-        <img src="your_image_url" alt="صورة شخصية" class="profile-pic" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+        <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورة شخصية" class="profile-pic">
         
         <h2 onclick="toggleContent('summary')">ملخص مهني</h2>
         <div id="summary" class="content">
-            <p>محترف في الأنظمة الأمنية...</p>
+            <p>محترف في الأنظمة الأمنية يتمتع بخبرة تتجاوز 7 سنوات في تطوير وتنفيذ حلول الأمان المتكاملة. يسعى للانضمام إلى فريق ديناميكي لتحقيق أهداف الأمان وتحسين الكفاءة.</p>
         </div>
 
         <h2 onclick="toggleContent('education')">التعليم</h2>
@@ -69,7 +76,7 @@
         <h2 onclick="toggleContent('experience')">الخبرة العملية</h2>
         <div id="experience" class="content">
             <ul>
-                <li>[اسم الوظيفة] - [اسم الشركة] - [سنة]</li>
+                <li>[اسم الوظيفة] - [اسم الشركة] - [من سنة] إلى [إلى سنة]</li>
             </ul>
         </div>
 
@@ -96,7 +103,11 @@
         </div>
 
         <div>
-            <button class="button" onclick="alert('تواصل معي!')">تواصل معي</button>
+            <a href="https://wa.me/201122822813" target="_blank" class="button">تواصل عبر واتساب</a>
+            <a href="https://t.me/div_muhamed" target="_blank" class="button">تواصل عبر تيليجرام</a>
+            <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" class="button">تواصل عبر البريد الإلكتروني</a>
+            <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="button">تواصل عبر لينكد إن</a>
+            <a href="https://www.facebook.com/mhamed45sya" target="_blank" class="button">تواصل عبر فيسبوك</a>
         </div>
     </div>
 </body>
