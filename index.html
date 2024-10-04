@@ -26,19 +26,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
+            background-color: transparent; /* إزالة الخلفية الزرقاء */
+            color: #007BFF; /* لون النص */
+            border: 2px solid #007BFF; /* إضافة حد */
             padding: 15px 0; /* زيادة الطول */
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s; /* إضافة تأثير عند التمرير */
             margin: 15px 30%; /* المسافة بين الأزرار وترك مسافة على الجانبين */
             width: 40%; /* جعل الزر بعرض 40% */
-            font-size: 18px; /* زيادة حجم الخط */
+            font-size: 20px; /* زيادة حجم الخط */
         }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #007BFF; /* خلفية عند التمرير */
+            color: white; /* لون النص عند التمرير */
         }
         .icons {
             margin-top: 20px;
