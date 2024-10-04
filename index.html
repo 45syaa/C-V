@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Page</title>
     <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> <!-- Adding Inconsolata font -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Rancho', cursive;
@@ -29,25 +30,22 @@
         }
         .button {
             background-color: transparent;
-            color: black; /* Color of the button text */
-            border: 2px solid black; /* Border color */
+            color: black; 
+            border: 2px solid #007BFF; 
             padding: 15px 0;
-            border-radius: 5px;
+            border-radius: 15px; /* More rounded edges */
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
             margin: 15px 30%;
             width: 40%;
-            font-size: 24px; /* Increased font size */
-            font-family: 'Inconsolata', monospace; /* Changing font for buttons */
-            text-shadow: 
-                2px 2px 0 rgba(255, 255, 255, 0.8),
-                -2px -2px 0 rgba(255, 255, 255, 0.8),
-                2px -2px 0 rgba(255, 255, 255, 0.8),
-                -2px 2px 0 rgba(255, 255, 255, 0.8); /* Multiple shadow effect */
+            font-size: 24px; 
+            font-family: 'Inconsolata', monospace; 
+            text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
         }
         .button:hover {
-            background-color: black; /* Background on hover */
-            color: white; /* Text color on hover */
+            background-color: #007BFF; /* Change background on hover */
+            color: white; 
+            transform: scale(1.05); /* Slightly enlarge button on hover */
         }
         .icons {
             margin-top: 20px;
@@ -55,12 +53,12 @@
             justify-content: center;
         }
         .icon {
-            width: 40px; /* Icon size */
-            margin: 0 20px; /* Space between icons */
+            width: 40px; 
+            margin: 0 20px; 
             transition: transform 0.2s;
         }
         .icon:hover {
-            transform: scale(1.1); /* Scale icon on hover */
+            transform: scale(1.1); 
         }
         .profile-pic {
             border-radius: 50%;
@@ -81,19 +79,25 @@
         <h1>Welcome to My Personal Page!</h1>
         <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="Profile Picture" class="profile-pic">
         
-        <button class="button" onclick="toggleContent('summary')">Professional Summary</button>
+        <button class="button" onclick="toggleContent('summary')">
+            <i class="fas fa-info-circle"></i> Professional Summary
+        </button>
         <div id="summary" class="content" style="display: none;">
             <p>A security systems professional with over 7 years of experience in developing and implementing integrated security solutions. Seeking to join a dynamic team to achieve security goals and enhance efficiency.</p>
         </div>
 
-        <button class="button" onclick="toggleContent('education')">Education</button>
+        <button class="button" onclick="toggleContent('education')">
+            <i class="fas fa-graduation-cap"></i> Education
+        </button>
         <div id="education" class="content" style="display: none;">
             <ul>
                 <li>Systems and Information - Pharaohs Institute - Graduated 2021</li>
             </ul>
         </div>
 
-        <button class="button" onclick="toggleContent('experience')">Work Experience</button>
+        <button class="button" onclick="toggleContent('experience')">
+            <i class="fas fa-briefcase"></i> Work Experience
+        </button>
         <div id="experience" class="content" style="display: none;">
             <ul>
                 <li>Security Systems Developer - Smart Systems Egypt - 2017 to Present</li>
@@ -101,7 +105,9 @@
             </ul>
         </div>
 
-        <button class="button" onclick="toggleContent('skills')">Skills</button>
+        <button class="button" onclick="toggleContent('skills')">
+            <i class="fas fa-tools"></i> Skills
+        </button>
         <div id="skills" class="content" style="display: none;">
             <ul>
                 <li>Quick Learner</li>
@@ -111,14 +117,18 @@
             </ul>
         </div>
 
-        <button class="button" onclick="toggleContent('certificates')">Courses and Certifications</button>
+        <button class="button" onclick="toggleContent('certificates')">
+            <i class="fas fa-certificate"></i> Courses and Certifications
+        </button>
         <div id="certificates" class="content" style="display: none;">
             <ul>
                 <li>[Course/Certificate Name] - [Issuing Organization] - [Year]</li>
             </ul>
         </div>
 
-        <button class="button" onclick="toggleContent('projects')">Projects</button>
+        <button class="button" onclick="toggleContent('projects')">
+            <i class="fas fa-project-diagram"></i> Projects
+        </button>
         <div id="projects" class="content" style="display: none;">
             <ul>
                 <li>Early Visual Alarm Project - This project is affiliated with the Ministry of Interior and the Central Bank. It involves installing 2 cameras outside banks. In case of any disturbance or danger, pressing a button sends a live image to the Ministry of Interior and the relevant directorate. The project has been completed in Cairo, Giza, and Alexandria.</li>
