@@ -30,6 +30,7 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* إخفاء المحتوى في البداية */
         }
         .button {
             background-color: transparent;
@@ -86,6 +87,7 @@
             } else {
                 arabicContent.style.display = 'block';
             }
+            document.getElementById('cvContainer').style.display = 'block'; // إظهار السيرة الذاتية
         }
 
         function goBackToLanguageSelection() {
@@ -96,6 +98,7 @@
             englishContent.style.display = 'none';
             arabicContent.style.display = 'none';
             languageSelection.style.display = 'block';
+            document.getElementById('cvContainer').style.display = 'none'; // إخفاء السيرة الذاتية
         }
         
         function toggleContent(id) {
@@ -105,15 +108,10 @@
     </script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="cvContainer">
         <h1>مرحبًا بكم في صفحتي الشخصية!</h1>
         <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورة شخصية" class="profile-pic">
         
-        <div id="languageSelection">
-            <button class="button" onclick="toggleLanguage('english')">English</button>
-            <button class="button" onclick="toggleLanguage('arabic')">العربية</button>
-        </div>
-
         <div id="englishContent" class="content">
             <h2>Professional CV</h2>
             <button class="button" onclick="toggleContent('summaryEng')">
@@ -235,6 +233,30 @@
 
             <button class="button" onclick="goBackToLanguageSelection()">رجوع</button>
         </div>
+
+        <div class="icons">
+            <a href="https://wa.me/201122822813" target="_blank" aria-label="WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
+            </a>
+            <a href="https://t.me/div_muhamed" target="_blank" aria-label="Telegram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" class="icon">
+            </a>
+            <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" aria-label="Gmail">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://www.facebook.com/mhamed45sya" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
+            </a>
+        </div>
+    </div>
+
+    <div id="languageSelection" class="container" style="display: block;">
+        <h1>اختر اللغة</h1>
+        <button class="button" onclick="toggleLanguage('english')">English</button>
+        <button class="button" onclick="toggleLanguage('arabic')">العربية</button>
     </div>
 </body>
 </html>
