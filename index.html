@@ -25,22 +25,18 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .icons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
         }
-        .button:hover {
-            background-color: #0056b3;
+        .icon {
+            width: 40px; /* حجم الأيقونة */
+            margin: 0 20px; /* المسافة بين الأيقونات */
+            transition: transform 0.2s;
         }
-        .content {
-            display: none;
-            margin-top: 10px;
+        .icon:hover {
+            transform: scale(1.1); /* تكبير الأيقونة عند التمرير */
         }
         .profile-pic {
             border-radius: 50%;
@@ -102,13 +98,14 @@
             </ul>
         </div>
 
-        <div>
-            <a href="https://wa.me/201122822813" target="_blank" class="button">تواصل عبر واتساب</a>
-            <a href="https://t.me/div_muhamed" target="_blank" class="button">تواصل عبر تيليجرام</a>
-            <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" class="button">تواصل عبر البريد الإلكتروني</a>
-            <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="button">تواصل عبر لينكد إن</a>
-            <a href="https://www.facebook.com/mhamed45sya" target="_blank" class="button">تواصل عبر فيسبوك</a>
-        </div>
-    </div>
-</body>
-</html>
+        <div class="icons">
+            <a href="https://wa.me/201122822813" target="_blank" aria-label="WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
+            </a>
+            <a href="https://t.me/div_muhamed" target="_blank" aria-label="Telegram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" class="icon">
+            </a>
+            <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" aria-label="Gmail">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target
