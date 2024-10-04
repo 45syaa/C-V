@@ -25,6 +25,20 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
         .icons {
             margin-top: 20px;
             display: flex;
@@ -57,26 +71,26 @@
         <h1>مرحبًا بك في صفحتي الشخصية!</h1>
         <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورة شخصية" class="profile-pic">
         
-        <h2 onclick="toggleContent('summary')">ملخص مهني</h2>
+        <button class="button" onclick="toggleContent('summary')">ملخص مهني</button>
         <div id="summary" class="content">
             <p>محترف في الأنظمة الأمنية يتمتع بخبرة تتجاوز 7 سنوات في تطوير وتنفيذ حلول الأمان المتكاملة. يسعى للانضمام إلى فريق ديناميكي لتحقيق أهداف الأمان وتحسين الكفاءة.</p>
         </div>
 
-        <h2 onclick="toggleContent('education')">التعليم</h2>
+        <button class="button" onclick="toggleContent('education')">التعليم</button>
         <div id="education" class="content">
             <ul>
                 <li>[اسم الشهادة] - [اسم الجامعة] - [سنة التخرج]</li>
             </ul>
         </div>
 
-        <h2 onclick="toggleContent('experience')">الخبرة العملية</h2>
+        <button class="button" onclick="toggleContent('experience')">الخبرة العملية</button>
         <div id="experience" class="content">
             <ul>
                 <li>[اسم الوظيفة] - [اسم الشركة] - [من سنة] إلى [إلى سنة]</li>
             </ul>
         </div>
 
-        <h2 onclick="toggleContent('skills')">المهارات</h2>
+        <button class="button" onclick="toggleContent('skills')">المهارات</button>
         <div id="skills" class="content">
             <ul>
                 <li>مهارة 1</li>
@@ -84,14 +98,14 @@
             </ul>
         </div>
 
-        <h2 onclick="toggleContent('certificates')">الدورات والشهادات</h2>
+        <button class="button" onclick="toggleContent('certificates')">الدورات والشهادات</button>
         <div id="certificates" class="content">
             <ul>
                 <li>[اسم الدورة] - [الجهة المصدرة] - [سنة]</li>
             </ul>
         </div>
 
-        <h2 onclick="toggleContent('projects')">المشاريع</h2>
+        <button class="button" onclick="toggleContent('projects')">المشاريع</button>
         <div id="projects" class="content">
             <ul>
                 <li>[اسم المشروع] - [وصف مختصر]</li>
@@ -108,4 +122,13 @@
             <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" aria-label="Gmail">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="icon">
             </a>
-            <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target
+            <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://www.facebook.com/mhamed45sya" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
