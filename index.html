@@ -3,73 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة شخصية</title>
-    <meta name="description" content="مرحبًا بك في صفحتي الشخصية. هذه صفحة بسيطة باستخدام GitHub Pages.">
+    <title>صفحة شخصية احترافية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(270deg, #ffccbc, #ffab91, #cfd8dc, #90aacb);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
             color: #333;
+            margin: 0;
+            padding: 20px;
             text-align: center;
-            margin: 0;
-            padding: 0;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 20px;
         }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        h1, h2 {
+            margin: 10px 0;
         }
-
-        h1 {
-            margin: 0;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        h2 {
-            margin: 20px 0 10px;
-            cursor: pointer; /* إضافة تأثير المؤشر */
-            color: #007BFF; /* لون أزرار القسم */
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-
+        .button:hover {
+            background-color: #0056b3;
+        }
         .content {
-            display: none; /* إخفاء المحتوى بشكل افتراضي */
-            text-align: left;
-            width: 80%; /* عرض القسم */
-            max-width: 600px; /* الحد الأقصى للعرض */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .icons {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .icon {
-            width: 40px; /* حجم الأيقونة */
-            margin: 0 20px; /* زيادة المسافة بين الأيقونات */
-            transition: transform 0.2s;
-        }
-
-        .icon:hover {
-            transform: scale(1.1); /* تكبير الأيقونة عند التمرير */
-        }
-
-        .profile-pic {
-            width: 250px; /* حجم الصورة */
-            height: 250px; /* حجم الصورة */
-            border-radius: 50%; /* شكل دائري للصورة */
-            margin-bottom: 20px; /* مسافة تحت الصورة */
-            object-fit: cover; /* الحفاظ على تناسق الصورة */
+            display: none;
+            margin-top: 10px;
         }
     </style>
     <script>
@@ -80,87 +50,54 @@
     </script>
 </head>
 <body>
-    <div>
-        <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورتي" class="profile-pic">
+    <div class="container">
         <h1>مرحبًا بك في صفحتي الشخصية!</h1>
+        <img src="your_image_url" alt="صورة شخصية" class="profile-pic" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
         
-        <div class="summary">
-            <h2>ملخص مهني</h2>
-            <p>
-                محترف في الأنظمة الأمنية يتمتع بخبرة تتجاوز 7 سنوات في تطوير وتنفيذ حلول الأمان 
-                المتكاملة. يتمتع بمهارات قوية في تحليل المخاطر، وإدارة الأمن السيبراني، وتقييم 
-                الأنظمة، مما يسهم في حماية البيانات والموارد. يسعى للانضمام إلى فريق ديناميكي 
-                في [اسم الشركة] للاستفادة من خبرتي لتحقيق أهداف الأمان وتحسين الكفاءة.
-            </p>
+        <h2 onclick="toggleContent('summary')">ملخص مهني</h2>
+        <div id="summary" class="content">
+            <p>محترف في الأنظمة الأمنية...</p>
         </div>
 
-        <div class="section">
-            <h2 onclick="toggleContent('educationContent')">التعليم</h2>
-            <div id="educationContent" class="content">
-                <ul>
-                    <li>[اسم الشهادة] - [اسم الجامعة] - [سنة التخرج]</li>
-                </ul>
-            </div>
+        <h2 onclick="toggleContent('education')">التعليم</h2>
+        <div id="education" class="content">
+            <ul>
+                <li>[اسم الشهادة] - [اسم الجامعة] - [سنة التخرج]</li>
+            </ul>
         </div>
 
-        <div class="section">
-            <h2 onclick="toggleContent('experienceContent')">الخبرة العملية</h2>
-            <div id="experienceContent" class="content">
-                <ul>
-                    <li>[اسم الوظيفة] - [اسم الشركة] - [من سنة] إلى [إلى سنة]</li>
-                    <li>[وصف موجز عن المهام والإنجازات]</li>
-                </ul>
-            </div>
+        <h2 onclick="toggleContent('experience')">الخبرة العملية</h2>
+        <div id="experience" class="content">
+            <ul>
+                <li>[اسم الوظيفة] - [اسم الشركة] - [سنة]</li>
+            </ul>
         </div>
 
-        <div class="section">
-            <h2 onclick="toggleContent('skillsContent')">المهارات</h2>
-            <div id="skillsContent" class="content">
-                <ul>
-                    <li>مهارة 1</li>
-                    <li>مهارة 2</li>
-                    <li>مهارة 3</li>
-                </ul>
-            </div>
+        <h2 onclick="toggleContent('skills')">المهارات</h2>
+        <div id="skills" class="content">
+            <ul>
+                <li>مهارة 1</li>
+                <li>مهارة 2</li>
+            </ul>
         </div>
 
-        <div class="section">
-            <h2 onclick="toggleContent('certificatesContent')">الدورات والشهادات</h2>
-            <div id="certificatesContent" class="content">
-                <ul>
-                    <li>[اسم الدورة/الشهادة] - [الجهة المصدرة] - [سنة الحصول عليها]</li>
-                </ul>
-            </div>
+        <h2 onclick="toggleContent('certificates')">الدورات والشهادات</h2>
+        <div id="certificates" class="content">
+            <ul>
+                <li>[اسم الدورة] - [الجهة المصدرة] - [سنة]</li>
+            </ul>
         </div>
 
-        <div class="section">
-            <h2 onclick="toggleContent('projectsContent')">المشاريع</h2>
-            <div id="projectsContent" class="content">
-                <ul>
-                    <li>[اسم المشروع] - [وصف مختصر عن المشروع]</li>
-                </ul>
-            </div>
+        <h2 onclick="toggleContent('projects')">المشاريع</h2>
+        <div id="projects" class="content">
+            <ul>
+                <li>[اسم المشروع] - [وصف مختصر]</li>
+            </ul>
         </div>
 
-        <p>هذه صفحة بسيطة باستخدام GitHub Pages.</p>
-    </div>
-    
-    <div class="icons">
-        <a href="https://wa.me/201122822813" target="_blank" aria-label="WhatsApp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
-        </a>
-        <a href="https://t.me/div_muhamed" target="_blank" aria-label="Telegram">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" class="icon">
-        </a>
-        <a href="mailto:mhamedibrahem65@gmail.com" target="_blank" aria-label="Gmail">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" class="icon">
-        </a>
-        <a href="https://www.linkedin.com/in/%E2%80%AAmhamed-ibrahem%E2%80%AC%E2%80%8F-ab99b31b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icon">
-        </a>
-        <a href="https://www.facebook.com/mhamed45sya" target="_blank" aria-label="Facebook">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
-        </a>
+        <div>
+            <button class="button" onclick="alert('تواصل معي!')">تواصل معي</button>
+        </div>
     </div>
 </body>
 </html>
