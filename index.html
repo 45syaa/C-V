@@ -78,11 +78,12 @@
             const englishContent = document.getElementById('englishContent');
             const arabicContent = document.getElementById('arabicContent');
             const languageSelection = document.getElementById('languageSelection');
+            englishContent.style.display = 'none';
+            arabicContent.style.display = 'none';
+            languageSelection.style.display = 'none';
             if (language === 'english') {
-                languageSelection.style.display = 'none';
                 englishContent.style.display = 'block';
             } else {
-                languageSelection.style.display = 'none';
                 arabicContent.style.display = 'block';
             }
         }
@@ -96,7 +97,7 @@
             arabicContent.style.display = 'none';
             languageSelection.style.display = 'block';
         }
-
+        
         function toggleContent(id) {
             const content = document.getElementById(id);
             content.style.display = content.style.display === 'block' ? 'none' : 'block';
@@ -114,6 +115,7 @@
         </div>
 
         <div id="englishContent" class="content">
+            <h2>Professional CV</h2>
             <button class="button" onclick="toggleContent('summaryEng')">
                 <i class="fas fa-info-circle"></i> Professional Summary
             </button>
@@ -174,6 +176,7 @@
         </div>
 
         <div id="arabicContent" class="content">
+            <h2>السيرة الذاتية المهنية</h2>
             <button class="button" onclick="toggleContent('summaryAra')">
                 <i class="fas fa-info-circle"></i> ملخص مهني
             </button>
@@ -209,6 +212,24 @@
                     <li>تطوير العمل</li>
                     <li>التركيز على الإنجازات</li>
                     <li>القدرة على تحمل ظروف العمل الصعبة</li>
+                </ul>
+            </div>
+
+            <button class="button" onclick="toggleContent('certificatesAra')">
+                <i class="fas fa-certificate"></i> الدورات والشهادات
+            </button>
+            <div id="certificatesAra" class="content" style="display: none;">
+                <ul>
+                    <li>[اسم الدورة / الشهادة] - [الجهة المصدرة] - [السنة]</li>
+                </ul>
+            </div>
+
+            <button class="button" onclick="toggleContent('projectsAra')">
+                <i class="fas fa-project-diagram"></i> المشاريع
+            </button>
+            <div id="projectsAra" class="content" style="display: none;">
+                <ul>
+                    <li>مشروع الإنذار البصري المبكر - هذا المشروع مرتبط بوزارة الداخلية والبنك المركزي. يشمل تركيب كاميرتين خارج البنوك. في حالة حدوث أي اضطراب أو خطر، يتم الضغط على زر لإرسال صورة مباشرة إلى وزارة الداخلية والمديرية المعنية. تم إكمال المشروع في القاهرة والجيزة والإسكندرية.</li>
                 </ul>
             </div>
 
