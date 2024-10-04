@@ -39,8 +39,8 @@
             border-radius: 15px; 
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s, transform 0.2s;
-            margin: 15px 10px; /* تعديل الهوامش ليتناسب مع الأزرار */
-            width: 30%; /* تعديل العرض للأزرار */
+            margin: 15px 10px; 
+            width: 30%; 
             font-size: 40px;
             font-family: 'Inconsolata', monospace; 
             text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
@@ -77,13 +77,29 @@
         function toggleLanguage(language) {
             const englishContent = document.getElementById('englishContent');
             const arabicContent = document.getElementById('arabicContent');
+            const languageSelection = document.getElementById('languageSelection');
             if (language === 'english') {
+                languageSelection.style.display = 'none';
                 englishContent.style.display = 'block';
-                arabicContent.style.display = 'none';
             } else {
+                languageSelection.style.display = 'none';
                 arabicContent.style.display = 'block';
-                englishContent.style.display = 'none';
             }
+        }
+
+        function goBackToLanguageSelection() {
+            const englishContent = document.getElementById('englishContent');
+            const arabicContent = document.getElementById('arabicContent');
+            const languageSelection = document.getElementById('languageSelection');
+
+            englishContent.style.display = 'none';
+            arabicContent.style.display = 'none';
+            languageSelection.style.display = 'block';
+        }
+
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </head>
@@ -92,7 +108,7 @@
         <h1>مرحبًا بكم في صفحتي الشخصية!</h1>
         <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="صورة شخصية" class="profile-pic">
         
-        <div>
+        <div id="languageSelection">
             <button class="button" onclick="toggleLanguage('english')">English</button>
             <button class="button" onclick="toggleLanguage('arabic')">العربية</button>
         </div>
@@ -132,4 +148,54 @@
                     <li>Quick Learner</li>
                     <li>Work Development</li>
                     <li>Achievement Orientation</li>
- 
+                    <li>Ability to Endure Difficult Work Conditions</li>
+                </ul>
+            </div>
+
+            <button class="button" onclick="toggleContent('certificatesEng')">
+                <i class="fas fa-certificate"></i> Courses and Certifications
+            </button>
+            <div id="certificatesEng" class="content" style="display: none;">
+                <ul>
+                    <li>[Course/Certificate Name] - [Issuing Organization] - [Year]</li>
+                </ul>
+            </div>
+
+            <button class="button" onclick="toggleContent('projectsEng')">
+                <i class="fas fa-project-diagram"></i> Projects
+            </button>
+            <div id="projectsEng" class="content" style="display: none;">
+                <ul>
+                    <li>Early Visual Alarm Project - This project is affiliated with the Ministry of Interior and the Central Bank. It involves installing 2 cameras outside banks. In case of any disturbance or danger, pressing a button sends a live image to the Ministry of Interior and the relevant directorate. The project has been completed in Cairo, Giza, and Alexandria.</li>
+                </ul>
+            </div>
+
+            <button class="button" onclick="goBackToLanguageSelection()">رجوع</button>
+        </div>
+
+        <div id="arabicContent" class="content">
+            <button class="button" onclick="toggleContent('summaryAra')">
+                <i class="fas fa-info-circle"></i> ملخص مهني
+            </button>
+            <div id="summaryAra" class="content" style="display: none;">
+                <p>محترف في أنظمة الأمن مع أكثر من 7 سنوات من الخبرة في تطوير وتنفيذ حلول الأمن المتكاملة. أسعى للانضمام إلى فريق ديناميكي لتحقيق أهداف الأمن وتعزيز الكفاءة.</p>
+            </div>
+
+            <button class="button" onclick="toggleContent('educationAra')">
+                <i class="fas fa-graduation-cap"></i> التعليم
+            </button>
+            <div id="educationAra" class="content" style="display: none;">
+                <ul>
+                    <li>أنظمة ومعلومات - معهد الفراعنة - تخرجت عام 2021</li>
+                </ul>
+            </div>
+
+            <button class="button" onclick="toggleContent('experienceAra')">
+                <i class="fas fa-briefcase"></i> الخبرة العملية
+            </button>
+            <div id="experienceAra" class="content" style="display: none;">
+                <ul>
+                    <li>مطور أنظمة أمنية - الأنظمة الذكية مصر - 2017 حتى الآن</li>
+                    <li>مسؤول عن تطوير وتنفيذ حلول الأمن وإدارة بروتوكولات الأمن.</li>
+                </ul>
+            </
