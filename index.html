@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Rancho', cursive; /* Using Rancho font */
+            font-family: 'Rancho', cursive;
             background-color: #f4f4f4;
             color: #333;
             margin: 0;
@@ -16,7 +16,7 @@
         }
         h1 {
             margin: 10px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .container {
             max-width: 800px;
@@ -27,24 +27,24 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .button {
-            background-color: transparent; /* Remove blue background */
-            color: #007BFF; /* Text color */
-            border: 2px solid #007BFF; /* Add border */
-            padding: 15px 0; /* Increase height */
+            background-color: transparent;
+            color: black; /* Color of the button text */
+            border: 2px solid black; /* Border color */
+            padding: 15px 0;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s; /* Add hover effect */
-            margin: 15px 30%; /* Space between buttons and margin on sides */
-            width: 40%; /* Set button width to 40% */
-            font-size: 20px; /* Increase font size */
+            transition: background-color 0.3s, color 0.3s;
+            margin: 15px 30%;
+            width: 40%;
+            font-size: 20px;
             text-shadow: 
-                2px 2px 0 rgba(255, 255, 255, 0.8), 
-                -2px -2px 0 rgba(255, 255, 255, 0.8), 
-                2px -2px 0 rgba(255, 255, 255, 0.8), 
+                2px 2px 0 rgba(255, 255, 255, 0.8),
+                -2px -2px 0 rgba(255, 255, 255, 0.8),
+                2px -2px 0 rgba(255, 255, 255, 0.8),
                 -2px 2px 0 rgba(255, 255, 255, 0.8); /* Multiple shadow effect */
         }
         .button:hover {
-            background-color: #007BFF; /* Background on hover */
+            background-color: black; /* Background on hover */
             color: white; /* Text color on hover */
         }
         .icons {
@@ -80,19 +80,19 @@
         <img src="https://raw.githubusercontent.com/45syaa/C-V/main/img_2_1694251231566.jpg" alt="Profile Picture" class="profile-pic">
         
         <button class="button" onclick="toggleContent('summary')">Professional Summary</button>
-        <div id="summary" class="content">
+        <div id="summary" class="content" style="display: none;">
             <p>A security systems professional with over 7 years of experience in developing and implementing integrated security solutions. Seeking to join a dynamic team to achieve security goals and enhance efficiency.</p>
         </div>
 
         <button class="button" onclick="toggleContent('education')">Education</button>
-        <div id="education" class="content">
+        <div id="education" class="content" style="display: none;">
             <ul>
                 <li>Systems and Information - Pharaohs Institute - Graduated 2021</li>
             </ul>
         </div>
 
         <button class="button" onclick="toggleContent('experience')">Work Experience</button>
-        <div id="experience" class="content">
+        <div id="experience" class="content" style="display: none;">
             <ul>
                 <li>Security Systems Developer - Smart Systems Egypt - 2017 to Present</li>
                 <li>Responsible for developing and implementing security solutions and managing security protocols.</li>
@@ -100,7 +100,7 @@
         </div>
 
         <button class="button" onclick="toggleContent('skills')">Skills</button>
-        <div id="skills" class="content">
+        <div id="skills" class="content" style="display: none;">
             <ul>
                 <li>Quick Learner</li>
                 <li>Work Development</li>
@@ -110,14 +110,14 @@
         </div>
 
         <button class="button" onclick="toggleContent('certificates')">Courses and Certifications</button>
-        <div id="certificates" class="content">
+        <div id="certificates" class="content" style="display: none;">
             <ul>
                 <li>[Course/Certificate Name] - [Issuing Organization] - [Year]</li>
             </ul>
         </div>
 
         <button class="button" onclick="toggleContent('projects')">Projects</button>
-        <div id="projects" class="content">
+        <div id="projects" class="content" style="display: none;">
             <ul>
                 <li>Early Visual Alarm Project - This project is affiliated with the Ministry of Interior and the Central Bank. It involves installing 2 cameras outside banks. In case of any disturbance or danger, pressing a button sends a live image to the Ministry of Interior and the relevant directorate. The project has been completed in Cairo, Giza, and Alexandria.</li>
             </ul>
